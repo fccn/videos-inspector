@@ -2,7 +2,7 @@ from string import ascii_uppercase
 import openpyxl
 from youtube_transcript_api import YouTubeTranscriptApi
 
-class InspectFileService:
+class InspectVideosService:
 
     def _generate_all_register_to_dict_from_worksheet(self, worksheet):
         columns = []
