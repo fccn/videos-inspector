@@ -14,10 +14,9 @@ def index():
             flash("No file selected!", "error")
             return redirect(url_for("index"))
 
-        file = request.files["fileInput"]
-        flash(f"File '{file.filename}' uploaded and processed successfully, staring process..", "success")
-
         try:
+            file = request.files["fileInput"]
+            flash(f"File '{file.filename}' uploaded and processed successfully, staring process..", "success")
             output_save_path = ProcessFileService().process_file(file)
             return send_file(output_save_path, as_attachment=True, download_name="output.xlsx")
         except:

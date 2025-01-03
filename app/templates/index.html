@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Import</title>
+    <title>Videos Inspector</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -38,8 +38,8 @@
             color: #e0e0e0;
         }
         button {
-            background: #03dac6;
-            color: #121212;
+            background: rgba(241, 160, 54, 0.93);
+            color:rgb(255, 255, 255);
             border: none;
             padding: 10px 20px;
             font-size: 1em;
@@ -48,7 +48,7 @@
             transition: background 0.3s ease;
         }
         button:hover {
-            background: #018786;
+            background:rgb(11, 116, 182);
         }
         .flash {
             margin-top: 20px;
@@ -57,17 +57,18 @@
             font-size: 1.1em;
         }
         .flash.success {
-            background: #018786;
+            background:#03dac6;
             color: #fff;
         }
         .flash.error {
-            background: #b00020;
+            background:rgba(176, 0, 32, 0.62);
             color: #fff;
         }
     </style>
 </head>
 <body>
     <h1>Upload Your File</h1>
+    <h3>The time to process increases according to the file size...</h3>
     {% with messages = get_flashed_messages(with_categories=True) %}
         {% if messages %}
             {% for category, message in messages %}
@@ -78,7 +79,7 @@
     <form method="POST" enctype="multipart/form-data">
         <label for="fileInput">Select a file:</label><br>
         <input type="file" id="fileInput" name="fileInput" accept="*/*"><br>
-        <button type="submit">Upload</button>
+        <button type="submit">Inspect</button>
     </form>
 </body>
 </html>
