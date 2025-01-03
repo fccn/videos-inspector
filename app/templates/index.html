@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos Inspector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #bb86fc;
+        }
+        form {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        label {
+            font-size: 1.2em;
+            color: #e0e0e0;
+        }
+        input[type="file"] {
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            background: #2a2a2a;
+            color: #e0e0e0;
+        }
+        input[type="file"]::file-selector-button {
+            background: #bb86fc;
+            color: #121212;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        input[type="file"]::file-selector-button:hover {
+            background: #3700b3;
+        }
+        button {
+            background: #03dac6;
+            color: #121212;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #018786;
+        }
+    </style>
+</head>
+<body>
+    <h1>Videos Inspector</h1>
+    <form>
+        <label for="fileInput">Select a file:</label><br>
+        <input type="file" id="fileInput" name="fileInput" accept="*/*"><br>
+        <button type="submit">Inspect</button>
+    </form>
+</body>
+</html>

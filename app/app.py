@@ -1,7 +1,7 @@
-import os
 from string import ascii_uppercase
 import openpyxl
 from youtube_transcript_api import YouTubeTranscriptApi
+from flask import Flask, render_template
 
 def get_video_links_by_sheet(workbook):
     values_by_column = {}
@@ -133,6 +133,12 @@ def main():
     finally:
         print("done")
         # os.remove("output.xlsx")
+    
+app = Flask(__name__)
+    
+@app.route("/")
+def home():
+    return render_template("index.html")
 
 if __name__ == "__main__":
-    main()
+        app.run()
