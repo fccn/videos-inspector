@@ -1,6 +1,7 @@
 # Videos Inspector
 
-![imagem](https://github.com/user-attachments/assets/b136ad6b-fb7a-4731-bde7-9925e2d8e712)
+![imagem](https://github.com/user-attachments/assets/9281d977-7e6f-4ee7-9dc3-670ba0b0ce5d)
+
 
 
 ## For what is it about to
